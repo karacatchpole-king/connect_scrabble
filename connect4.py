@@ -63,9 +63,9 @@ def takeTurn(player, board):
     while chosenCol < 1 or chosenCol > COLUMN_COUNT:
         chosenCol = int(input("Player "+PLAYER_SYMBOLS[turn]+", make your selection (1-"+str(COLUMN_COUNT)+"):"))
         if chosenCol >= 1 and chosenCol <= COLUMN_COUNT:
-            if board[0][chosenCol-1] != EMPTY:
+            if board[5][chosenCol-1] != EMPTY:
                 chosenCol = -1
-                print("Sorry but that column is full") #this message is currently displayed when a player is trying to put their piece in the second row
+                print("Sorry but that column is full") 
 
     col = chosenCol - 1 # this is the index of the column which is 1 less than the number they input
 
